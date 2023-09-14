@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html leng="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>White Statement</title>
+    </head>
+    <body>
+        <script>
+             
+             const person = {
+                firstName: "Exzaraja",
+                middleName: "Indiandra",
+                lastName: "Scandea"
+             };
+
+             console.info(person.firstName);
+             console.info(person.middleName);
+             console.info(person.lastName);
+
+             const firstName = "Exzaraja";
+             const lastName= "Scandea";
+
+             with (person) {
+             console.info(person.firstName);
+             console.info(person.middleName);
+             console.info(person.lastName);
+             }
+        </script>
+    </body>
+</html>

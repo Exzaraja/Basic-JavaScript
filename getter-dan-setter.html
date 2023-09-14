@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html leng="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Getter dan Setter</title>
+    </head>
+    <body>
+        <script>
+            
+            const person = {
+                firstName: "Exzaraja",
+                lastName: "Scandea",
+                get fullName(){
+                    return `${this.firstName} ${this.lastName}`;
+                },
+                set fullName(value){
+                    const array = value.split(" ");
+                    this.firstName = array[0];
+                    this.lastName = array[1];
+                }
+            };
+
+            person.fullName = "Exzaraja Indiandra";
+            console.table(person);
+
+            person.fullName = "ZAANO COUNTER";
+            console.table(person);
+
+            person.fullName = "inYour Dream";
+            console.table(person);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html leng="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Operator In</title>
+    </head>
+    <body>
+        <script>
+            
+            const person = {
+                firstName: "Exzaraja",
+                lastName: "Scandea"
+            };
+            
+            if ("firstName" in person) {
+                alert(`Hello ${person.firstName}`);
+            } else {
+                alert(`Hello`);
+            }
+
+            const student = {
+                firstName: "Exzaraja",
+                middleName: undefined,
+                lastName: "Scandea"
+            }
+
+            if ("middleName" in student) {
+                alert(`Hello ${student.middleName}`);
+            } else {
+                alert("Hello Student");
+            }
+
+            const names = [null, "Exzaraja", null];
+            const result = 0 in names;
+            document.writeln(`<p>${result}</p>`);
+        </script>
+    </body>
+</html>

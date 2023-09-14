@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html leng="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kata Kunci this</title>
+    </head>
+    <body>
+        <script>
+            
+            console.info(this);
+
+            const person = {
+                name: "Exza",
+                sayHello: function (value){
+                    console.info(`Hello ${value} My Name is ${this.name}`);
+                }
+            };
+
+            person.sayHello("Exzaraja");
+
+        </script>
+    </body>
+</html>

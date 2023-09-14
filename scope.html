@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html leng="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Scope</title>
+    </head>
+    <body>
+        <script>
+            //global scope
+            let counter = 0;
+
+            //global scope
+            function hitMe(){
+                // local scope hitMe
+                counter++;
+            }
+
+            hitMe();
+            hitMe();
+
+            console.info(counter);
+
+            function first(){
+                // local scope first
+                let firstVariable = "First";
+
+                function firstNested(){
+                    console.info(firstVariable);
+                }
+                firstNested();
+            }
+            function second(){
+                // local scope second
+                let secondVariable = "Second";
+               // console.info(firstVariable); // local scope // ERROR
+            }
+
+            first();
+            second();
+
+
+            // global scope
+            // console.info(firstVariable); // global scope // ERROR
+            // console.info(secondVariable); // global scope // ERROR
+
+        </script>
+    </body>
+</html>
